@@ -5,10 +5,13 @@ const ResultPage = ({ result }) => {
         <h2>Score Summary:</h2>
         
         <ul>
-            {result.array.forEach(element => {
-                
-            })}
-        </ul>
+            {result.map((item, index) => (
+                <li key={index}>
+                <h3>{item.name}</h3>
+                <p>{item.score}</p>
+                </li>
+            ))}
+            </ul>
       </div>
     );
   };

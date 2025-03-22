@@ -11,12 +11,13 @@ const HomeTop = ({page, isEnglish, setIsEnglish}) => {
     return (
         <div>
             <AppBar position="sticky" sx={{ backgroundColor: "white", boxShadow: "none" }}>
-            <Container sx = {{marginLeft: 5}}>
-                <Toolbar position="fixed" display = "flex">
+                <Toolbar sx =  {{display: "flex", justifyContent: "space-between",alignContent: "center" }}>
+                    <Box sx = {{display: "flex", alignContent: "center", gap: 1, marginLeft: 5}}>
                     <img src="sy.webp" alt="logo" style={{ width: 50, height: 50, borderRadius: "17px",   }} />
-                    <Typography sx={{ fontFamily: "Calluna, Georgia, serif", fontWeight: "bold", flexGrow: 1, color: "#886199" , fontSize: 25}}>
+                    <Typography sx={{ fontFamily: "Calluna, Georgia, serif", fontWeight: "bold", flexGrow: 1, color: "#886199" , fontSize: 25, marginTop: 0.5}}>
                         100 philosophers
                     </Typography>
+                    </Box>
                     <Button
                         sx={{padding: 0, color: "#886199", fontSize: 20, fontWeight: "bold", Right: 5}}
                         onClick={() => setIsEnglish(!isEnglish)}
@@ -26,7 +27,6 @@ const HomeTop = ({page, isEnglish, setIsEnglish}) => {
                         </Typography>
                     </Button>
                 </Toolbar>
-            </Container>
             </AppBar>
             <Box
                 sx={{
