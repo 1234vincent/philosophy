@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Typography, Button, Container, Grid, Paper, AppBar, Toolbar } from "@mui/material";
 import LinearWithValueLabel from "./LinearWithValueLabel";  
 import { useEffect } from "react";
-const HomeTop = ({page, isEnglish, setIsEnglish}) => {
+const HomeTop = ({page, isEnglish, setIsEnglish, ready}) => {
     const [progress, setProgress] = React.useState(0);
     useEffect(() => {
         setProgress((page) * 25);
@@ -28,6 +28,7 @@ const HomeTop = ({page, isEnglish, setIsEnglish}) => {
                     </Button>
                 </Toolbar>
             </AppBar>
+            {ready === false && 
             <Box
                 sx={{
                     position: "relative",
@@ -72,7 +73,7 @@ const HomeTop = ({page, isEnglish, setIsEnglish}) => {
                     </Container>
                 </Container>
             </Box>
-
+            }
         </div>
         
     );

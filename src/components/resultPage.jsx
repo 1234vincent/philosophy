@@ -1,18 +1,13 @@
+import React from "react";
+import Barchart from "./BarChart";
+import { Box } from '@mui/material';
 const ResultPage = ({ result }) => {
+    console.log(result);
     return (
-      <div>
-        <h1>Result Page</h1>
-        <h2>Score Summary:</h2>
-        
-        <ul>
-            {result.map((item, index) => (
-                <li key={index}>
-                <h3>{item.name}</h3>
-                <p>{item.score}</p>
-                </li>
-            ))}
-            </ul>
-      </div>
+        <Box>
+            <h1>Result</h1>
+            <Barchart data={result} />
+        </Box>
     );
   };
   export default ResultPage;

@@ -11,7 +11,7 @@ import questionData from './data/questionData';
 function App() {
   const [isEnglish, setIsEnglish] = useState(true);
   // 当前页码
-  const [page, setPage] = useState(0);
+  const [page, setPage] = useState(3);
   const [ready, setReady] = useState(false);
   // 答案状态：每组题目保存一个数组，初始值全部为 null（也可以改为 0，如果需要默认选中某个选项）
   // const [answers, setAnswers] = useState([
@@ -42,10 +42,11 @@ function App() {
         });
       });
 
-      const updatedResult = name.map((philosopher) => ({
+      let updatedResult = name.map((philosopher) => ({
         ...philosopher,
-        score: score[philosopher.name],
+        score: score[philosopher.name] || 0,
     }));
+    updatedResult = updatedResult.sort((a, b) => b.score - a.score);
     setResult(updatedResult);
     setReady(true);
     console.log(updatedResult);
@@ -68,15 +69,17 @@ function App() {
         justifyContent: 'center',
         gap: '60px',
       }}
+  
     >
-      <HomeTop page={page} isEnglish = {isEnglish} setIsEnglish = {setIsEnglish}/>
+
+      <HomeTop page={page} isEnglish = {isEnglish} setIsEnglish = {setIsEnglish} ready = {ready} />      
       {page < 4 ? (
         <>
           <QuestionPage page={page} answer={answers} setAnswer={updateAnswer} isEnglish={isEnglish} />
           <NextPage page={page} setPage={setPage} />
         </>
       ) : (
-        ready && <ResultPage result={result} />
+        ready && <ResultPage result={result}  />
       )}
 {/* 
       <ResultPage answer = {answers}/>
