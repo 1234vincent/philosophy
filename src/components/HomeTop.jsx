@@ -50,7 +50,7 @@ const HomeTop = ({page, isEnglish, setIsEnglish, ready}) => {
                 <Container sx={{ mt: 10, zIndex: 2 }}>
                     <Grid container spacing={3} justifyContent="center">
                         {[
-                            { text: "Be yourself, answer honestly, find your phi type.", bg: "rgba(227, 242, 253, 0.7)", pic: "/test-header-2.svg"  }, // 浅蓝
+                            { text: "Be yourself, answer honestly, find your phi type.", bg: "rgba(227, 242, 253, 0.7)", pic: "test-header-2.svg"  }, // 浅蓝
                             { text: "Understand how your phi type affects various aspects of your life.", bg: "rgba(255, 243, 224, 0.7)", pic: "theory.svg" }, // 浅橙
                             { text: "Shape the self you want with our curated materials.", bg: "rgba(243, 229, 245, 0.7)", pic: "exercise.svg" } // 浅紫
                         ].map((item, index) => (
