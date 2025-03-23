@@ -11,21 +11,21 @@ import questionData from './data/questionData';
 function App() {
   const [isEnglish, setIsEnglish] = useState(true);
   // 当前页码
-  const [page, setPage] = useState(3);
+  const [page, setPage] = useState(0);
   const [ready, setReady] = useState(false);
   // 答案状态：每组题目保存一个数组，初始值全部为 null（也可以改为 0，如果需要默认选中某个选项）
-  // const [answers, setAnswers] = useState([
-  //   [null, null, null, null, null], // 第一组：5个问题
-  //   [null, null, null, null, null], // 第二组
-  //   [null, null, null, null, null], // 第三组
-  //   [null, null, null, null, null], // 第四组
-  //   ]);
-    const [answers, setAnswers] = useState([
-      [2, 2, 2, 2, 2], // 第一组：5个问题
-      [2, 2, 2, 2, 2], // 第二组
-      [2, 2, 2, 2, 2], // 第三组
-      [2, 2, 2, 2, 2], // 第四组
-      ]);
+  const [answers, setAnswers] = useState([
+    [null, null, null, null, null], // 第一组：5个问题
+    [null, null, null, null, null], // 第二组
+    [null, null, null, null, null], // 第三组
+    [null, null, null, null, null], // 第四组
+    ]);
+  //   const [answers, setAnswers] = useState([
+  //     [2, 2, 2, 2, 2], // 第一组：5个问题
+  //     [2, 2, 2, 2, 2], // 第二组
+  //     [2, 2, 2, 2, 2], // 第三组
+  //     [2, 2, 2, 2, 2], // 第四组
+  //     ]);
   const [result, setResult] = useState(name);
   
   useEffect(() => { 
