@@ -7,7 +7,7 @@ const HomeTop = ({page, isEnglish, setIsEnglish, ready}) => {
     useEffect(() => {
         setProgress((page) * 25);
     }, [page]);
-
+ 
     return (
         <div>
             <AppBar position="sticky" sx={{ backgroundColor: "white", boxShadow: "none" }}>
