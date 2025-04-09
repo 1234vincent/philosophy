@@ -1,117 +1,61 @@
 const questionData = [
   {
+    // 第一组问题（1～5 号问题）
     questions: [
       {
-        question_cn: "人类理性是我们认知世界最可靠的工具。",
-        question_en: "Human reason is the most reliable tool for understanding the world.",
+        question_cn: "你觉得人类的理性真的是我们理解世界最靠谱的工具吗？（就像笛卡尔那句‘我思故我在’所暗示的那样）",
+        question_en: "Do you think human reason is really the most reliable tool for understanding the world? (Inspired by Descartes' 'I think, therefore I am')",
         weights: { Plato: 1, Descartes: 1, Kant: 1, Foucault: -0.5, Code: -1, Lorde: -0.5 }
       },
       {
-        question_cn: "知识的获得是性别中立的，与个体身份无关。",
-        question_en: "The acquisition of knowledge is gender-neutral and unrelated to personal identity.",
+        question_cn: "你认为知识的获取是不是完全中性的，跟一个人的性别和身份一点关系都没有？（正如 Code 在‘Is the Sex of the Knower’中讨论的那样）",
+        question_en: "Do you believe that the acquisition of knowledge is completely neutral, unrelated to one's gender or identity? (As discussed in Code’s 'Is the Sex of the Knower')",
         weights: { Descartes: 1, Kant: 1, Code: -1, deBeauvoir: -1, Lorde: -1, Lugones: -1 }
       },
       {
-        question_cn: "社会是由阶级斗争构成的。",
-        question_en: "Society is fundamentally shaped by class struggle.",
+        question_cn: "你觉得社会到底是不是由阶级斗争造就的？（Marx 在 PPT 里强调阶级斗争是社会的根本动力）",
+        question_en: "Do you think society is fundamentally shaped by class struggle? (Marx emphasized in the slides that class struggle is the driving force of society)",
         weights: { Marx: 1, Fanon: 1, Quijano: 1, Kant: -0.5 }
       },
       {
-        question_cn: "语言不仅反映现实，也构成了我们的现实。",
-        question_en: "Language not only reflects reality but also constructs it.",
+        question_cn: "你是否同意，语言不仅仅是现实的镜子，而是实际上还在塑造我们的世界？（福柯讲‘权力无处不在，语言构成现实’）",
+        question_en: "Do you agree that language not only reflects reality, but actually constructs our world? (Foucault emphasized how power and language shape reality)",
         weights: { Foucault: 1, Fanon: 1, Plato: 0.5, Descartes: -1 }
       },
       {
-        question_cn: "哲学应该服务于人的解放。",
-        question_en: "Philosophy should serve human liberation.",
+        question_cn: "你认为哲学是不是应该帮助人们获得解放？（这也是 Zea 和 Fanon 等人在课堂上一再提到的‘哲学的承诺’）",
+        question_en: "Do you think philosophy should help achieve human liberation? (This aligns with the 'commitment' aspect discussed by Zea and Fanon)",
         weights: { Zea: 1, Fanon: 1, Lorde: 1, Quijano: 1, Plato: -0.5 }
       }
     ]
   },
   {
+    // 第二组问题（6～10 号问题）
     questions: [
       {
-        question_cn: "身体是知识的一部分，我们不能忽视经验。",
-        question_en: "The body is part of knowledge; experience must not be ignored.",
+        question_cn: "你觉得身体也是我们获取知识的重要部分吗？经验难道可以被忽视吗？（de Beauvoir 的‘存在主义’强调具身经验的重要性）",
+        question_en: "Do you think that the body is also an important part of how we acquire knowledge? Can experience really be ignored? (as de Beauvoir emphasizes the significance of embodied experience in existentialism)",
         weights: { deBeauvoir: 1, Lorde: 1, Code: 1, Descartes: -1 }
       },
       {
-        question_cn: "我们天生拥有自由意志。",
-        question_en: "We are born with free will.",
+        question_cn: "你认为，人一出生是不是就自带自由意志？（这与笛卡尔和康德关于自律和自由意志的讨论有关）",
+        question_en: "Do you believe that we are born with free will? (This relates to Descartes’ and Kant’s discussions on autonomy and free will)",
         weights: { Descartes: 1, Plato: 1, Foucault: -1, Marx: -0.5 }
       },
       {
-        question_cn: "历史有一个普遍的、线性的进步方向。",
-        question_en: "History follows a universal and linear trajectory of progress.",
+        question_cn: "你同意历史总是沿着一个统一、线性的进步方向发展吗？（参考 Kant 的‘普遍历史观’）",
+        question_en: "Do you agree that history follows a universal, linear trajectory of progress? (Referencing Kant’s idea for a universal history from a cosmopolitan perspective)",
         weights: { Kant: 1, Quijano: -1, Zea: -0.5, Fanon: -0.5 }
       },
       {
-        question_cn: "社会结构如种族和性别是历史建构出来的，而非自然的。",
-        question_en: "Social structures like race and gender are historically constructed, not natural.",
+        question_cn: "你觉得种族和性别这些社会结构，是历史造出来的，而不是天生就有的？（这也是后殖民和女权理论中经常讨论的议题）",
+        question_en: "Do you think that social structures like race and gender are constructed by history, rather than being natural? (A key theme in postcolonial and feminist theories)",
         weights: { Fanon: 1, Lugones: 1, Code: 1, Kant: -1 }
       },
       {
-        question_cn: "权力无处不在，它通过社会规范悄无声息地运行。",
-        question_en: "Power is everywhere, operating silently through social norms.",
+        question_cn: "你会同意这样一句话吗：权力无处不在，总是悄悄地通过一些社会规范来影响我们的生活？（正如福柯在‘Panopticism’中论述的那样）",
+        question_en: "Would you agree that power is everywhere, subtly influencing our lives through social norms? (As Foucault discusses in his analysis of panopticism)",
         weights: { Foucault: 1, Lorde: 0.5, Descartes: -1 }
-      }
-    ]
-  },
-  {
-    questions: [
-      {
-        question_cn: "哲学应该以抽象、普遍的原则为核心。",
-        question_en: "Philosophy should be based on abstract and universal principles.",
-        weights: { Plato: 1, Descartes: 1, Kant: 1, Zea: -0.5, Fanon: -0.5 }
-      },
-      {
-        question_cn: "殖民主义不仅是军事征服，也是对知识、语言与身体的控制。",
-        question_en: "Colonialism is not just military conquest, but also control over knowledge, language, and the body.",
-        weights: { Fanon: 1, Quijano: 1, Lugones: 1, Kant: -0.5 }
-      },
-      {
-        question_cn: "哲学家应当从自身的社会位置出发思考问题。",
-        question_en: "Philosophers should reflect from the standpoint of their own social positions.",
-        weights: { Code: 1, deBeauvoir: 1, Lorde: 1, Descartes: -1 }
-      },
-      {
-        question_cn: "资本主义是异化人类、制造虚假意识的制度。",
-        question_en: "Capitalism alienates humanity and creates false consciousness.",
-        weights: { Marx: 1, Fanon: 0.5, Plato: 0.5, Kant: -0.5 }
-      },
-      {
-        question_cn: "性别是一种社会制度，而非自然本质。",
-        question_en: "Gender is a social system, not a natural essence.",
-        weights: { Lugones: 1, deBeauvoir: 1, Code: 1, Kant: -0.5 }
-      }
-    ]
-  },
-  {
-    questions: [
-      {
-        question_cn: "权力应当去中心化，由多元社群共同参与管理。",
-        question_en: "Power should be decentralized and governed by diverse communities.",
-        weights: { Foucault: 1, Zea: 1, Lorde: 1, Plato: -1 }
-      },
-      {
-        question_cn: "宗教和传统观念是社会压迫的工具。",
-        question_en: "Religion and traditional beliefs are tools of social oppression.",
-        weights: { Marx: 1, Fanon: 0.5, Lorde: 0.5, Plato: -1 }
-      },
-      {
-        question_cn: "身份的交错性（种族、性别、阶级等）决定了人的经验。",
-        question_en: "Intersectionality (race, gender, class, etc.) shapes human experience.",
-        weights: { Lorde: 1, Lugones: 1, Code: 1, Descartes: -1 }
-      },
-      {
-        question_cn: "教育应当解放人，而非再生产社会结构。",
-        question_en: "Education should liberate people, not reproduce existing social structures.",
-        weights: { Zea: 1, Fanon: 1, Quijano: 1, Kant: -0.5 }
-      },
-      {
-        question_cn: "知识是斗争的场域，它不是中性的，也不是无争议的。",
-        question_en: "Knowledge is a site of struggle—it is neither neutral nor uncontested.",
-        weights: { Foucault: 1, Code: 1, Marx: 0.5, Descartes: -1 }
       }
     ]
   }

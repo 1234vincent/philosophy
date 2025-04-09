@@ -31,7 +31,6 @@ const ResultPage = ({ result, name }) => {
             flexDirection: "row",
             alignItems: "center",
             justifyContent: "center",
-            height: "100vh",
         }}
         >
           <Container>

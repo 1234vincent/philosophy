@@ -14,18 +14,13 @@ function App() {
   const [selectedName, setSelectedName] =  useState("");
   const [page, setPage] = useState(0);
   const [ready, setReady] = useState(false);
-  // 答案状态：每组题目保存一个数组，初始值全部为 null（也可以改为 0，如果需要默认选中某个选项）
   const [answers, setAnswers] = useState([
     [null, null, null, null, null], // 第一组
     [null, null, null, null, null], // 第二组
-    [null, null, null, null, null], // 第三组
-    [null, null, null, null, null], // 第四组
     ]);
     // const [answers, setAnswers] = useState([
     //   [2, 2, 2, 2, 2], // 第一组：5个问题
     //   [2, 2, 2, 2, 2], // 第二组
-    //   [2, 2, 2, 2, 2], // 第三组
-    //   [2, 2, 2, 2, 2], // 第四组
     //   ]);
   const [result, setResult] = useState(name);
   const [topFive, setTopFive] = useState(name);
@@ -35,7 +30,7 @@ function App() {
   }, [result]);
 
   useEffect(() => { 
-    if (page === 4) {
+    if (page === 2) {
       const score = {}
       console.log("Ready to update");
       questionData.forEach((question_group, group_Index) => {
@@ -78,7 +73,7 @@ function App() {
   
     >
       <HomeTop page={page} isEnglish = {isEnglish} setIsEnglish = {setIsEnglish} ready = {ready} />      
-      {page < 4 ? (
+      {page < 2 ? (
         <>
           <QuestionPage page={page} answer={answers} setAnswer={updateAnswer} isEnglish={isEnglish} />
           <NextPage page={page} setPage={setPage} />
