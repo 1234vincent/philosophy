@@ -11,23 +11,29 @@ import questionData from './data/questionData';
 function App() {
   const [isEnglish, setIsEnglish] = useState(true);
   // 当前页码
+  const [selectedName, setSelectedName] =  useState("");
   const [page, setPage] = useState(0);
   const [ready, setReady] = useState(false);
   // 答案状态：每组题目保存一个数组，初始值全部为 null（也可以改为 0，如果需要默认选中某个选项）
   const [answers, setAnswers] = useState([
-    [null, null, null, null, null], // 第一组：5个问题
+    [null, null, null, null, null], // 第一组
     [null, null, null, null, null], // 第二组
     [null, null, null, null, null], // 第三组
     [null, null, null, null, null], // 第四组
     ]);
-  //   const [answers, setAnswers] = useState([
-  //     [2, 2, 2, 2, 2], // 第一组：5个问题
-  //     [2, 2, 2, 2, 2], // 第二组
-  //     [2, 2, 2, 2, 2], // 第三组
-  //     [2, 2, 2, 2, 2], // 第四组
-  //     ]);
+    // const [answers, setAnswers] = useState([
+    //   [2, 2, 2, 2, 2], // 第一组：5个问题
+    //   [2, 2, 2, 2, 2], // 第二组
+    //   [2, 2, 2, 2, 2], // 第三组
+    //   [2, 2, 2, 2, 2], // 第四组
+    //   ]);
   const [result, setResult] = useState(name);
-  
+  const [topFive, setTopFive] = useState(name);
+  useEffect(() => {
+    setSelectedName(result[0].name)
+    setTopFive(result.slice(0, 5))
+  }, [result]);
+
   useEffect(() => { 
     if (page === 4) {
       const score = {}
@@ -71,7 +77,6 @@ function App() {
       }}
   
     >
-
       <HomeTop page={page} isEnglish = {isEnglish} setIsEnglish = {setIsEnglish} ready = {ready} />      
       {page < 4 ? (
         <>
@@ -79,7 +84,7 @@ function App() {
           <NextPage page={page} setPage={setPage} />
         </>
       ) : (
-        ready && <ResultPage result={result}  />
+        ready && <ResultPage result={topFive} name = {selectedName}  />
       )}
 {/* 
       <ResultPage answer = {answers}/>

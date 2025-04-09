@@ -10,7 +10,6 @@ import {
 } from 'recharts';
 
 const Barchart = ({ data }) => {
-  // 如果 props 中没有 data，可以使用默认数据（方便调试）
   const exampleData = [
     { "name": "Plato", "score": 0 },
     { "name": "Descartes", "score": 0 },
@@ -31,7 +30,7 @@ const Barchart = ({ data }) => {
   const chartData = data || exampleData;
 
   return (
-    <div style={{ width: '100%', height: 500 }}>
+    <div style={{ width: '45%', height: 300 }}>
       <ResponsiveContainer width="100%" height="100%">
         <BarChart
           data={chartData}
