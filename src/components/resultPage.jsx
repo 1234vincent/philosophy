@@ -22,7 +22,7 @@ const ResultPage = ({ result, name }) => {
       const namesWithImages = result.map(({ name, score }) => ({
         name,
         score,
-        image: imageMap[name] ? `/public/${imageMap[name]}` : null
+        image: imageMap[name] ? `/${imageMap[name]}` : null
       }));
     return (
         <Box
