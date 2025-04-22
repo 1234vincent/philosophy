@@ -25,7 +25,7 @@ const ResultPage = ({ result, name }) => {
         >
           <Container>
             <img
-                src={`sy.webp`}
+                src={`Kant.webp`}
                // src={namesWithImages.find(item => item.name === name)?.image}
                 alt={name}
                 style={{ width: "200px", height: "200px", borderRadius: "50%" }}
