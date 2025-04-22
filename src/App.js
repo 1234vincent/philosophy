@@ -10,7 +10,7 @@ import name from './data/nameData';
 import questionData from './data/questionData';
 function App() {
   const [isEnglish, setIsEnglish] = useState(true);
-  const [lanyuejia, setLanyuejia] = useState(true);
+  const [lanyuejia] = useState(true);
   // 当前页码
   const [selectedName, setSelectedName] =  useState("");
   const [page, setPage] = useState(0);
