@@ -10,6 +10,7 @@ import name from './data/nameData';
 import questionData from './data/questionData';
 function App() {
   const [isEnglish, setIsEnglish] = useState(true);
+  const [lanyuejia, setLanyuejia] = useState(true);
   // 当前页码
   const [selectedName, setSelectedName] =  useState("");
   const [page, setPage] = useState(0);
@@ -83,7 +84,7 @@ function App() {
           <NextPage page={page} setPage={setPage} />
         </>
       ) : (
-        ready && <ResultPage result={topFive} name = {selectedName}  />
+        ready && <ResultPage result={topFive} name = {selectedName} isEnglish = {isEnglish} lanyuejia = {lanyuejia} />
       )}
 {/* 
       <ResultPage answer = {answers}/>
