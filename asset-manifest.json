@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/philosophy/static/css/main.e6c13ad2.css",
-    "main.js": "/philosophy/static/js/main.2dce0720.js",
+    "main.js": "/philosophy/static/js/main.f9a4a65a.js",
     "static/js/488.03537a02.chunk.js": "/philosophy/static/js/488.03537a02.chunk.js",
     "index.html": "/philosophy/index.html",
     "main.e6c13ad2.css.map": "/philosophy/static/css/main.e6c13ad2.css.map",
-    "main.2dce0720.js.map": "/philosophy/static/js/main.2dce0720.js.map",
+    "main.f9a4a65a.js.map": "/philosophy/static/js/main.f9a4a65a.js.map",
     "488.03537a02.chunk.js.map": "/philosophy/static/js/488.03537a02.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.2dce0720.js"
+    "static/js/main.f9a4a65a.js"
   ]
 }
