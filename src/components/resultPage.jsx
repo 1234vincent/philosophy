@@ -1,5 +1,4 @@
 import React from "react";
-import Barchart from "./BarChart";
 import { Box } from '@mui/material';
 import { Container } from "react-bootstrap";
 const ResultPage = ({ result, name }) => {
@@ -9,11 +8,11 @@ const ResultPage = ({ result, name }) => {
         Descartes: "Descartes.png",
         Kant: "Kant.png",
       };
-      const namesWithImages = result.map(({ name, score }) => ({
-        name,
-        score,
-        image: imageMap[name] ? `/${imageMap[name]}` : null
-      }));   
+      // const namesWithImages = result.map(({ name, score }) => ({
+      //   name,
+      //   score,
+      //   image: imageMap[name] ? `/${imageMap[name]}` : null
+      // }));   
       console.log("ResultPage", name, imageMap[name]);
     return (
         <Box
