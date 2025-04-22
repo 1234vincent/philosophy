@@ -32,7 +32,7 @@ const NextPage = ({page, setPage}) => {
         }}
         variant="contained"
         >
-        {page === 3 ? (<DoneAllIcon />) : (<ArrowForwardIcon />)}
+        {page === 2 ? (<DoneAllIcon />) : (<ArrowForwardIcon />)}
         </Button>
 
     );

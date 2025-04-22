@@ -3,27 +3,18 @@ import Barchart from "./BarChart";
 import { Box } from '@mui/material';
 import { Container } from "react-bootstrap";
 const ResultPage = ({ result, name }) => {
-    console.log("ResultPage", name);
+
     const imageMap = {
-        Plato: "plato.webp",
-        Descartes: "Descartes.webp",
-        Kant: "Kant.webp",
-        Marx: "Marx.webp",
-        Foucault: "Foucault.webp",
-        deBeauvoir: "Beauvoir.webp",
-        Zea: "Zea.webp", 
-        Code: "Code.webp",
-        Lorde: "Lorde.webp",
-        Mills: "Mills.webp",
-        Fanon: "Fanon.webp",
-        Quijano: "quijano.webp",
-        Lugones: "Lugones.webp"
+        Plato: "plato.png",
+        Descartes: "Descartes.png",
+        Kant: "Kant.png",
       };
       const namesWithImages = result.map(({ name, score }) => ({
         name,
         score,
         image: imageMap[name] ? `/${imageMap[name]}` : null
-      }));
+      }));   
+      console.log("ResultPage", name, imageMap[name]);
     return (
         <Box
         sx ={{
@@ -35,13 +26,13 @@ const ResultPage = ({ result, name }) => {
         >
           <Container>
             <img
-                src={namesWithImages.find(item => item.name === name)?.image}
+                src={`sy.webp`}
+               // src={namesWithImages.find(item => item.name === name)?.image}
                 alt={name}
                 style={{ width: "200px", height: "200px", borderRadius: "50%" }}
             />
             <h2>{name}</h2>
           </Container>
-          <Barchart data={result} />
         </Box>
     );
   };

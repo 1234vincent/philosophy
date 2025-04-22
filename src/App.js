@@ -19,8 +19,8 @@ function App() {
     [null, null, null, null, null], // 第二组
     ]);
     // const [answers, setAnswers] = useState([
-    //   [2, 2, 2, 2, 2], // 第一组：5个问题
-    //   [2, 2, 2, 2, 2], // 第二组
+    //   [1, 1, 1, 1, 1], // 第一组：5个问题
+    //   [1, 1, 1, 1, 1], // 第二组
     //   ]);
   const [result, setResult] = useState(name);
   const [topFive, setTopFive] = useState(name);
@@ -28,17 +28,21 @@ function App() {
     setSelectedName(result[0].name)
     setTopFive(result.slice(0, 5))
   }, [result]);
-
+  const mapLikerToScore = (value)  => {
+    return (4 - value) / 3;
+  }
   useEffect(() => { 
     if (page === 2) {
       const score = {}
       console.log("Ready to update");
+      console.log(answers);
       questionData.forEach((question_group, group_Index) => {
         question_group.questions.forEach((question, question_Index) => {
           const answerValue = answers[group_Index][question_Index];
           if (answerValue == null) return;
           Object.entries(question.weights).forEach(([philosopher, weight]) => {
-            score[philosopher] = (score[philosopher] || 0) + answerValue * weight;
+            const attitudeScore = mapLikerToScore(answerValue);
+            score[philosopher] = (score[philosopher] || 0) + attitudeScore * weight;
           });
         });
       });
