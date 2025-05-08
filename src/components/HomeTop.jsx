@@ -40,7 +40,7 @@ const HomeTop = ({page, isEnglish, setIsEnglish, ready}) => {
 
                 <Container sx={{ position: "relative", zIndex: 2, pt: 8 }}>
                     <Typography variant="h3" color="white" fontWeight="bold" align="center">
-                         Free Phi Test
+                    {isEnglish ? "So, what is freedom?" : "那么，什么是自由？"}
                     </Typography>
                     <Typography variant="subtitle1" color="white" align="center">
                         Exploer®
@@ -50,9 +50,9 @@ const HomeTop = ({page, isEnglish, setIsEnglish, ready}) => {
                 <Container sx={{ mt: 10, zIndex: 2 }}>
                     <Grid container spacing={3} justifyContent="center">
                         {[
-                            { text: "Be yourself, answer honestly, find your phi type.", bg: "rgba(227, 242, 253, 0.7)", pic: "test-header-2.svg"  }, // 浅蓝
-                            { text: "Understand how your phi type affects various aspects of your life.", bg: "rgba(255, 243, 224, 0.7)", pic: "theory.svg" }, // 浅橙
-                            { text: "Shape the self you want with our curated materials.", bg: "rgba(243, 229, 245, 0.7)", pic: "exercise.svg" } // 浅紫
+                            { text: isEnglish ? "Be yourself, answer honestly, find your phi type." : "读书破万卷，自有心中光", bg: "rgba(227, 242, 253, 0.7)", pic: "test-header-2.svg"  }, // 浅蓝
+                            { text: isEnglish ? "Understand how your phi type affects various aspects of your life." : "玉在山而草木润，渊生珠而崖不枯", bg: "rgba(255, 243, 224, 0.7)", pic: "theory.svg" }, // 浅橙
+                            { text: isEnglish ? "Shape the self you want with our curated materials." :  "非学无以广才，非志无以成学", bg: "rgba(243, 229, 245, 0.7)", pic: "exercise.svg" } // 浅紫
                         ].map((item, index) => (
                             <Grid item xs={12} md={4} key={index}>
                                 <Paper sx={{ 

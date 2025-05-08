@@ -7,6 +7,7 @@ const ResultPage = ({ name, isEnglish }) => {
     Plato: "Plato.png",
     Descartes: "Descartes.png",
     Kant: "Kant.png",
+    Beauvoir: "Beauvoir.png",
   };
 
   const philosopher = resultData.find((item) => item.name === name);
