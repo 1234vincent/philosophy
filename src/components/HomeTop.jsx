@@ -18,14 +18,14 @@ const HomeTop = ({page, isEnglish, setIsEnglish, ready}) => {
                         100 philosophers
                     </Typography>
                     </Box>
-                    <Button
+                    {/* <Button
                         sx={{padding: 0, color: "#886199", fontSize: 20, fontWeight: "bold", Right: 5}}
                         onClick={() => setIsEnglish(!isEnglish)}
                         >
                         <Typography sx={{ color: "#886199", fontSize: 20, fontWeight: "bold" }}>
                             {isEnglish ? "中文" : "English"}
                         </Typography>
-                    </Button>
+                    </Button> */}
                 </Toolbar>
             </AppBar>
             {ready === false && 
