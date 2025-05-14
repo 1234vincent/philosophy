@@ -14,13 +14,13 @@ const Question = ({ question, index, selectedValue, onAnswer, isEnglish }) => {
   };
 
   const radioColor = {
-    1: "#32A474",
-    2: "#32A474",
-    3: "#32A474",
+    1: "#3d5a80",
+    2: "##3d5a80",
+    3: "##3d5a80",
     4: "#9B9FAA",
-    5: "#886199",
-    6: "#886199",
-    7: "#886199"
+    5: "#e0a458",
+    6: "#e0a458",
+    7: "#e0a458"
   };
 
   // 当选项变化时，调用 onAnswer 通知父组件更新该题答案
@@ -64,7 +64,7 @@ const Question = ({ question, index, selectedValue, onAnswer, isEnglish }) => {
         >
           {/* 左侧 "同意" */}
           <Box sx = {{marginTop: "28px"}}>
-            <Typography variant="body1" sx={{ fontFamily: 'Poppins', fontWeight: 'bold', fontSize: '18px', color: "#32A474" }}>
+            <Typography variant="body1" sx={{ fontFamily: 'Poppins', fontWeight: 'bold', fontSize: '18px', color: "#3d5a80" }}>
             {isEnglish ? "Agree" : "同意"}
           </Typography>
           </Box>
@@ -102,7 +102,7 @@ const Question = ({ question, index, selectedValue, onAnswer, isEnglish }) => {
           </Box>
           {/* 右侧 "反对" */}
           <Box sx = {{marginTop: "28px"}}>
-                      <Typography variant="body1" sx={{ fontFamily: 'Poppins', fontWeight: 'bold', fontSize: '18px', color: "#886199" }}>
+                      <Typography variant="body1" sx={{ fontFamily: 'Poppins', fontWeight: 'bold', fontSize: '18px', color: "#e0a458" }}>
           {isEnglish ? "Disagree" : "不同意"}
           </Typography>
           </Box>

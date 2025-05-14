@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Typography, Button, Container, Grid, Paper, AppBar, Toolbar } from "@mui/material";
+import { Box, Typography, Container, Grid, Paper, AppBar, Toolbar } from "@mui/material";
 import LinearWithValueLabel from "./LinearWithValueLabel";  
 import { useEffect } from "react";
 const HomeTop = ({page, isEnglish, setIsEnglish, ready}) => {
@@ -14,7 +14,7 @@ const HomeTop = ({page, isEnglish, setIsEnglish, ready}) => {
                 <Toolbar sx =  {{display: "flex", justifyContent: "space-between",alignContent: "center" }}>
                     <Box sx = {{display: "flex", alignContent: "center", gap: 1, marginLeft: 5}}>
                     <img src="sy.webp" alt="logo" style={{ width: 50, height: 50, borderRadius: "17px",   }} />
-                    <Typography sx={{ fontFamily: "Calluna, Georgia, serif", fontWeight: "bold", flexGrow: 1, color: "#886199" , fontSize: 25, marginTop: 0.5}}>
+                    <Typography sx={{ fontFamily: "Calluna, Georgia, serif", fontWeight: "bold", flexGrow: 1, color: "#e0a458" , fontSize: 25, marginTop: 0.5}}>
                         100 philosophers
                     </Typography>
                     </Box>
@@ -34,7 +34,7 @@ const HomeTop = ({page, isEnglish, setIsEnglish, ready}) => {
                     position: "relative",
                     width: "100%",
                     height: "500px", // 绿色区域高度
-                    background: "linear-gradient(to bottom, #32A474 60%, #F9F9F9 40%)", // 渐变分割
+                    background: "linear-gradient(to bottom, #3d5a80 60%, #F9F9F9 40%)", // 渐变分割
                 }}
                 >
 
