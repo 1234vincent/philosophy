@@ -5,7 +5,7 @@ import { useEffect } from "react";
 const HomeTop = ({page, isEnglish, setIsEnglish, ready}) => {
     const [progress, setProgress] = React.useState(0);
     useEffect(() => {
-        setProgress((page) * 25);
+        setProgress((page) * 50);
     }, [page]);
  
     return (
