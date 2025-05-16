@@ -43,7 +43,7 @@ const HomeTop = ({page, isEnglish, setIsEnglish, ready}) => {
                     {isEnglish ? "So, what is freedom?" : "那么，什么是自由？"}
                     </Typography>
                     <Typography variant="subtitle1" color="white" align="center">
-                        Exploer®
+                        See which philosopher do you think like®
                     </Typography>
                 </Container>
 
